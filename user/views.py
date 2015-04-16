@@ -1,5 +1,4 @@
 from django.template.loader import get_template
-from django.template import Context
 from django.template import RequestContext
 from django.shortcuts import render
 from django.http import HttpResponse

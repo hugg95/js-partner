@@ -2,7 +2,9 @@
 <html>
     <head>
         <title>{{title}}</title>
-        <script type="text/javascript" src="{{STATIC_URL}}js/jquery.js"></script>
+        {% load staticfiles %}
+        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
     </head>
     <body></body>
 </html>
