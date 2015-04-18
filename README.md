@@ -1,2 +1,2 @@
-# better-js
+# js-partner
 JavaScript practice platform
