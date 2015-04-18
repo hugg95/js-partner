@@ -38,7 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user',
-    'model.User',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -94,7 +93,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'better_js',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'lncwwn',
         'HOST': '127.0.0.1',
         'PORT': '3306'
     }
