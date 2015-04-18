@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/lib/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/lib/bootstrap-theme.min.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/signup.css' %}" type="text/css" rel="stylesheet">
+    <title>User sign up</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <div class="row navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">BetterJs</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="javascript:;"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</a></li>
+                            <li><a href="javascript:;"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save</a></li>
+                            <li><a href="javascript:;"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sign up</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="sign-up-form">
+                <h3>User sign up</h3>
+                <input type="text" class="form-control" placeholder="Nick" autofocus="true">
+                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" placeholder="Confirm password">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-default btn-primary btn-block js-sign-up">Sign in</button>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+<script type="text/javascript" data-main="{% static 'js/main' %}" src="{% static 'js/lib/require.js' %}"></script>
+<script type="text/javascript" data-module="bootstrap"></script>
+<script type="text/javascript" data-module="signup"></script>
+</html>
