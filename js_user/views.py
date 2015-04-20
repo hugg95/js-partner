@@ -9,8 +9,6 @@ def signup(request):
         html = tmplt.render(RequestContext(request, None))
         return HttpResponse(html)
     else:
-        print request.POST['name']
-        print request.POST['password']
         name = request.POST['name']
         password = request.POST['password']
         password_confirm = request.POST['password_confirm']
@@ -18,5 +16,5 @@ def signup(request):
             pass
         else:
             tmplt = get_template('signup.html')
-        html = tmplt.render(RequestContext(request, None))
-        return HttpResponse(html)
+            html = tmplt.render(RequestContext(request, None))
+            return HttpResponse(html)
