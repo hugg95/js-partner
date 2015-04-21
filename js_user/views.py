@@ -22,3 +22,8 @@ def signup(request):
 def signin(request):
     if request.method != 'POST':
         return render_to_response('user/signin.html')
+
+
+def change_password(request):
+    if request.method != 'POST':
+        return render_to_response('user/change_password.html')
