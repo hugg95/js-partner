@@ -1,0 +1,8 @@
+.form-area {
+    max-width: 326px;
+    margin: 100px auto 0;
+}
+
+.form-area>input {
+    margin: 5px 0;
+}

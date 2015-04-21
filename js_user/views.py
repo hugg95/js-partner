@@ -6,7 +6,7 @@ from django.template.loader import get_template
 
 def signup(request):
     if request.method != 'POST':
-        return render_to_response('signup.html', {})
+        return render_to_response('user/signup.html')
     else:
         name = request.POST['name']
         password = request.POST['password']
@@ -14,6 +14,11 @@ def signup(request):
         if password == password_confirm:
             pass
         else:
-            tmplt = get_template('signup.html')
+            tmplt = get_template('user/signup.html')
             html = tmplt.render(RequestContext(request, None))
             return HttpResponse(html)
+
+
+def signin(request):
+    if request.method != 'POST':
+        return render_to_response('user/signin.html')
