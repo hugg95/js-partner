@@ -1,36 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "common/basic.html" %}
 {% load staticfiles %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static 'css/lib/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
-    <link href="{% static 'css/lib/bootstrap-theme.min.css' %}" type="text/css" rel="stylesheet">
-    <link href="{% static 'css/signup.css' %}" type="text/css" rel="stylesheet">
-    <title>User sign up</title>
-</head>
-<body>
-    <div class="container-fluid">
-        {% include "common/header.html" %}
-        <div class="main">
-            <form class="sign-up-form" action="/user/signup/" method="post">{% csrf_token %}
-                <h3>User sign up</h3>
-                <input type="text" class="form-control" name="name" placeholder="Name" autofocus="true">
-                <input type="password" class="form-control" name="password" placeholder="Password">
-                <input type="password" class="form-control" name="password_confirm" placeholder="Confirm password">
-                <input type="text" class="form-control" name="email" placeholder="Email address">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
-                <button class="btn btn-default btn-primary btn-block" type="submit">Sign up</button>
-            </form>
-        </div>
-        <div class="footer"></div>
+{% block css %}
+<link href="{% static 'css/signup.css' %}" type="text/css" rel="stylesheet">
+{% endblock %}
+{% block title %}User sign up{% endblock %}
+{% block main %}
+<form class="sign-up-form" action="/user/signup/" method="post">{% csrf_token %}
+    <h3>User sign up</h3>
+    <input type="text" class="form-control" name="name" placeholder="Name" autofocus="true">
+    <input type="password" class="form-control" name="password" placeholder="Password">
+    <input type="password" class="form-control" name="password_confirm" placeholder="Confirm password">
+    <input type="text" class="form-control" name="email" placeholder="Email address">
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
     </div>
-</body>
-<script type="text/javascript" data-main="{% static 'js/main' %}" src="{% static 'js/lib/require.js' %}"></script>
-<script type="text/javascript" data-module="bootstrap"></script>
+    <button class="btn btn-default btn-primary btn-block" type="submit">Sign up</button>
+</form>
+{% endblock %}
+{% block script %}
 <script type="text/javascript" data-module="signup"></script>
-</html>
+{% endblock %}
