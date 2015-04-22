@@ -1,3 +1,32 @@
+.navbar,
+.nav,
+.navbar-nav,
+.navbar-brand,
+.nav a {
+    height: 45px;
+    min-height: 45px;
+    line-height: 100%;
+}
+
+.navbar-header>a,
+.navbar-nav>li>a {
+    color: #fff;
+    line-height: 15px;
+}
+
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:visited {
+    text-decoration: underline;
+    background-color: #474d57;
+}
+
+.customize-navbar {
+    margin: 0 -15px;
+    color: #fff;
+    border-radius: 0;
+    background-color: #474d57;
+}
+
 .form-area {
     max-width: 326px;
     margin: 100px auto 0;
