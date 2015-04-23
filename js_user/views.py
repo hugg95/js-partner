@@ -20,8 +20,13 @@ def signup(request):
 
 # user login
 def login(request):
-    if request.method != 'POST':
-        return render_to_response('user/signin.html')
+    if request.method == 'POST':
+        name = request.POST['name']
+        password = request.POST['password']
+        remember = request.POST['remember']
+
+
+    return render_to_response('user/login.html')
 
 
 # user change password
