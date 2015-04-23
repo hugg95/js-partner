@@ -1,23 +1,19 @@
-.navbar,
-.nav,
-.navbar-nav,
-.navbar-brand,
-.nav a {
+.min-height {
     height: 45px;
     min-height: 45px;
-    line-height: 100%;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+  text-decoration: underline;
+  background-color: #474d57;
 }
 
 .navbar-header>a,
 .navbar-nav>li>a {
+    height: 45px;
     color: #fff;
     line-height: 15px;
-}
-
-.navbar-nav>li>a:hover,
-.navbar-nav>li>a:visited {
-    text-decoration: underline;
-    background-color: #474d57;
 }
 
 .customize-navbar {
