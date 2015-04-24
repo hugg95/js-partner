@@ -11,7 +11,11 @@
                     <li><a href="javascript:;">Fork</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    {% if name %}
+                    <li><a href="/user/logout/"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{name}}</a></li>
+                    {% else %}
                     <li><a href="/user/login/"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sign in</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
