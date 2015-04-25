@@ -119,7 +119,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.qq.com'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = '1002246588@qq.com'
+EMAIL_HOST = 'smtp.aliyun.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'postmanager@recursion.cn'
 EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_SSL = True

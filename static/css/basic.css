@@ -12,8 +12,13 @@
 .navbar-header>a,
 .navbar-nav>li>a {
     height: 45px;
+    margin-top: -1px;
     color: #fff;
     line-height: 15px;
+}
+
+.navbar-collapse {
+    border-top: 0;
 }
 
 .customize-navbar {

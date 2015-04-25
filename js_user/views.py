@@ -16,7 +16,7 @@ def signup(request):
         if password == password_confirm:
             js_user = JsUser.objects.create_user(name, password, email)
             js_user.save()
-            send_mail('Subject here', 'Here is the message.', '1002246588@qq.com', ['lncwwn@163.com'], fail_silently=False)
+            send_mail('Subject here', 'Here is the message.', 'postmanager@recursion.cn', ['lncwwn@163.com'], fail_silently=False)
             return HttpResponseRedirect('/')
 
     return render_to_response('user/signup.html', RequestContext(request))
