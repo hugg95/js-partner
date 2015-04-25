@@ -11,9 +11,9 @@ class JsUserManager(models.Manager):
 
 
 class JsUser(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, unique=True)
     password = models.CharField(max_length=200)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     created = models.DateTimeField()
 
     objects = JsUserManager()
