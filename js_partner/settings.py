@@ -123,3 +123,7 @@ EMAIL_PORT = 465
 EMAIL_HOST_USER = 'postmanager@recursion.cn'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_SSL = True
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)

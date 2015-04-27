@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 
 
@@ -15,6 +16,7 @@ def run(request):
 def save(request):
     pass
 
+
 # user signup
 def signup(request):
     if request.method == 'POST':
@@ -24,7 +26,7 @@ def signup(request):
         email = request.POST['email']
 
         if password == password_confirm:
-            user = User.objects.create_user(name, password, email)
+            user = User.objects.create_user(name, email, password)
             user.save()
             return HttpResponseRedirect('/')
 
@@ -36,10 +38,16 @@ def login(request):
     if request.method == 'POST':
         name = request.POST['name']
         password = request.POST['password']
-        remember = request.POST['remember']
+        print name
+        print password
+        # remember = request.POST.get('remember', False)
+        user = authenticate(username=name, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return HttpResponseRedirect('/')
 
-
-    return render_to_response('user/login.html')
+    return render_to_response('user/login.html', RequestContext(request))
 
 
 # user change password
